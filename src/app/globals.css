@@ -86,10 +86,10 @@
 }
 
 .embla {
-  width: 90vw;
-  height: 90vh;
-  max-width: 80rem;
-  margin: 3rem auto 0 auto;
+  /* height: 90vh; */
+
+  margin: 0 3rem;
+
   --slide-height: 70vh;
   --slide-spacing: 1rem;
   --slide-size: 100%;
