@@ -117,7 +117,7 @@ export function Navbar() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/emi-calculator" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               EMI Calculator
             </NavigationMenuLink>
