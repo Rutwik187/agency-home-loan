@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 
 import { useRecoilState, useResetRecoilState } from "recoil";
 
@@ -11,10 +11,13 @@ import { calculateEmiOutcome, validateForm } from "@/lib/utils";
 
 import stateAtom from "@/atoms/stateAtom";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Label } from "@/components/ui/label";
 
 export default function EMICalculator() {
   const [state, setState] = useRecoilState(stateAtom);
   const resetState = useResetRecoilState(stateAtom);
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
   const { loanAmount, interestRate, loanTenure, prepayments, errors } = state;
 
@@ -38,7 +41,7 @@ export default function EMICalculator() {
         Number(loanAmount),
         Number(interestRate),
         Number(loanTenure),
-        prepayments
+        date
       ),
       errors: {},
     });
@@ -86,6 +89,16 @@ export default function EMICalculator() {
                   error={errors?.loanTenure}
                   onChange={onInputChange}
                 />
+
+                <div className="flex flex-col gap-2">
+                  <Label>Starting Date</Label>
+                  <Calendar
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    className="rounded-md border"
+                  />
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">

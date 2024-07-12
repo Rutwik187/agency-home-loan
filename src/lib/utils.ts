@@ -44,7 +44,7 @@ function calculateEmiOutcome(
   loanAmount: number,
   interestRate: number,
   loanTenure: number,
-  prepayments: Prepayments
+  date: Date | undefined
 ) {
   // EMI Details
   const monthlyInterestRate = interestRate / MONTHS_IN_YEAR / 100;
@@ -55,6 +55,7 @@ function calculateEmiOutcome(
       monthlyInterestRate *
       (1 + monthlyInterestRate) ** totalPayments) /
     denominator;
+  const currentDate = date ? new Date(date) : new Date();
 
   let totalInterestPayable = 0;
 
@@ -74,10 +75,6 @@ function calculateEmiOutcome(
     }
     let principalPayment = emi - interestPayment;
 
-    if (prepayments && prepayments[i] > 0) {
-      principalPayment = principalPayment + prepayments[i];
-    }
-
     const totalPayment = emi;
 
     totalInterestPayable += interestPayment;
@@ -90,8 +87,12 @@ function calculateEmiOutcome(
     cumulativePrincipal =
       i === 1 ? principalPayment : cumulativePrincipal + principalPayment;
 
+    const paymentDate = new Date(currentDate);
+    paymentDate.setMonth(paymentDate.getMonth() + (i - 1));
+
     schedule.push({
       month: i,
+      startingDate: paymentDate,
       principalPayment,
       interestPayment,
       totalPayment,

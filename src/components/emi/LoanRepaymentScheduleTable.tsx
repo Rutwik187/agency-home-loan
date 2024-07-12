@@ -17,6 +17,8 @@ function LoanRepaymentScheduleTable({
 
   const { prepayments, outcome } = state;
 
+  console.log("outcome", outcome);
+
   const onPrepaymentsChange =
     (month: number) => (e: ChangeEvent<HTMLInputElement>) => {
       const { value } = e.target;
@@ -26,6 +28,13 @@ function LoanRepaymentScheduleTable({
 
       setState({ ...state, prepayments: clonedPrepayments });
     };
+
+  function formatDate(date: Date): string {
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+    const year = String(date.getFullYear()).slice(-2); // Get the last two digits of the year
+    return `${day}/${month}/${year}`;
+  }
 
   return (
     <div className="relative overflow-x-auto shadow-lg rounded-lg ">
@@ -44,13 +53,13 @@ function LoanRepaymentScheduleTable({
         <thead className="text-xs text-white uppercase bg-primary">
           <tr>
             <Th>Month</Th>
+            <Th>Date</Th>
             <Th>Principal Payment</Th>
             <Th>Interest Payment</Th>
             <Th>Total Payment</Th>
             <Th>Principal Outstanding</Th>
             <Th>Cumulative Interest</Th>
             <Th>Cumulative Principal</Th>
-            <Th>Prepayments (if any)</Th>
           </tr>
         </thead>
         <tbody>
@@ -59,22 +68,13 @@ function LoanRepaymentScheduleTable({
               {outcome?.schedule.map((s: Schedule) => (
                 <Tr key={s.month}>
                   <Td>{s.month}</Td>
+                  <Td>{s.startingDate && formatDate(s.startingDate)}</Td>
                   <Td>{toCurrency(s.principalPayment)}</Td>
                   <Td>{toCurrency(s.interestPayment)}</Td>
                   <Td>{toCurrency(s.totalPayment)}</Td>
                   <Td>{toCurrency(s.principalOutstanding)}</Td>
                   <Td>{toCurrency(s.cumulativeInterest)}</Td>
                   <Td>{toCurrency(s.cumulativePrincipal)}</Td>
-                  <Td>
-                    <TextField
-                      name={`${s.month}`}
-                      placeholder="5,00,000 ₹"
-                      unit=""
-                      onChange={onPrepaymentsChange(s.month)}
-                      onBlur={onCalculate}
-                      value={prepayments?.[s.month] || ""}
-                    />
-                  </Td>
                 </Tr>
               ))}
             </>

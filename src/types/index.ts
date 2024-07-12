@@ -8,6 +8,7 @@ interface Schedule {
   principalOutstanding: number;
   cumulativeInterest: number;
   cumulativePrincipal: number;
+  startingDate: Date | undefined;
 }
 
 interface Outcome {
