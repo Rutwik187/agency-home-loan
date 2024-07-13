@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-4 gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-            <h2 className="text-primary text-3xl font-bold">SB Finance</h2>
+            <h2 className="text-primary text-3xl font-bold">SB FinWise</h2>
 
             <p className="text-base leading-relaxed text-gray-600 mt-7">
               We enable users to harness AI’s full potential responsibly,

@@ -12,6 +12,7 @@ import Footer from "@/components/footer";
 import Testimonials from "@/components/testimonials";
 import EMICalculator from "./emi-calculator/page";
 import { RecoilRoot } from "recoil";
+import ContactUs from "@/components/contact-us";
 
 export default function Home() {
   const OPTIONS: EmblaOptionsType = { loop: true };
@@ -30,6 +31,7 @@ export default function Home() {
         <LogoCloud />
         <HowItWorks />
         <Testimonials />
+        <ContactUs />
         <Footer />
       </div>
     </RecoilRoot>

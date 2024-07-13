@@ -7,18 +7,19 @@ import { useRecoilState, useResetRecoilState } from "recoil";
 import { EMI, LoanRepaymentScheduleTable, TextField } from "@/components/emi";
 
 import { CURRENCY_SYMBOL } from "@/constants/emi";
-import { calculateEmiOutcome, validateForm } from "@/lib/utils";
+import { calculateEmiOutcome, cn, validateForm } from "@/lib/utils";
 
 import stateAtom from "@/atoms/stateAtom";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Label } from "@/components/ui/label";
+import { usePathname } from "next/navigation";
 
 export default function EMICalculator() {
   const [state, setState] = useRecoilState(stateAtom);
   const resetState = useResetRecoilState(stateAtom);
   const [date, setDate] = useState<Date | undefined>(new Date());
-
+  const pathname = usePathname();
   const { loanAmount, interestRate, loanTenure, prepayments, errors } = state;
 
   const onInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -90,7 +91,7 @@ export default function EMICalculator() {
                   onChange={onInputChange}
                 />
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 w-fit">
                   <Label>Starting Date</Label>
                   <Calendar
                     mode="single"
@@ -121,7 +122,9 @@ export default function EMICalculator() {
         </div>
       </div>
 
-      <LoanRepaymentScheduleTable onCalculate={onCalculate} />
+      <div className={cn(pathname === "/" ? "hidden" : "block")}>
+        <LoanRepaymentScheduleTable onCalculate={onCalculate} />
+      </div>
     </div>
   );
 }
