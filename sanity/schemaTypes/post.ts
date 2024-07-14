@@ -11,11 +11,6 @@ export default defineType({
       type: "string",
     }),
     defineField({
-      name: "metaDesc",
-      title: "Meta Description",
-      type: "text",
-    }),
-    defineField({
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -23,6 +18,11 @@ export default defineType({
         source: "title",
         maxLength: 96,
       },
+    }),
+    defineField({
+      name: "metaDesc",
+      title: "Meta Description",
+      type: "string",
     }),
 
     defineField({

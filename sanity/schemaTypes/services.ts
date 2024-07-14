@@ -11,6 +11,15 @@ export default defineType({
       type: "string",
     }),
     defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+    }),
+    defineField({
       name: "mainImage",
       title: "Main image",
       type: "image",
@@ -26,9 +35,9 @@ export default defineType({
       ],
     }),
     defineField({
-      name: "metaDescription",
+      name: "metaDesc",
       title: "Meta Description",
-      type: "text",
+      type: "string",
     }),
     defineField({
       name: "description",

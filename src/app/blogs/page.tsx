@@ -19,7 +19,7 @@ const Posts = async () => {
     <div className="">
       {posts?.map((post, index) => (
         <Link
-          href={`/posts/${post.slug.current}`}
+          href={`/blogs/${post.slug.current}`}
           key={index}
           className="flex flex-col justify-center antialiased  text-gray-800  gap-4"
         >

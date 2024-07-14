@@ -6,8 +6,8 @@ export const postsQuery = groq`*[_type == "post"] {
   title,
   slug,
   mainImage,
+  metaDesc,
   "imageURL": mainImage.asset->url,
-  "authorName": author->name,
 }`;
 
 // Get a single post by its slug
@@ -19,3 +19,18 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
 export const postPathsQuery = groq`*[_type == "post" && defined(slug.current)][]{
     "params": { "slug": slug.current }
   }`;
+
+export const servicesQuery = groq`*[_type == "services"] {
+  title,
+  slug,
+
+ metaDesc,
+}`;
+
+export const singleServiceQuery = groq`*[_type == "services" && slug.current == $slug][0] {
+  title,
+  slug,
+  "imageURL": mainImage.asset->url,
+  description
+
+}`;

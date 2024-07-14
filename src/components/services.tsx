@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import Heading from "./ui/heading";
-import { Button } from "./ui/button";
 
 export const Services = ({
   items,
@@ -12,8 +11,12 @@ export const Services = ({
 }: {
   items: {
     title: string;
-    description: string;
-    link: string;
+    slug: {
+      _type: string;
+      current: string;
+    };
+    imageURL: string;
+    metaDesc: string | null;
   }[];
   className?: string;
 }) => {
@@ -30,8 +33,8 @@ export const Services = ({
       >
         {items.map((item, idx) => (
           <Link
-            href={item?.link}
-            key={item?.link}
+            href={`/services/${item?.slug?.current}`}
+            key={item?.slug?.current}
             className="relative group  block p-2 h-full w-full"
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -55,7 +58,7 @@ export const Services = ({
             </AnimatePresence>
             <Card>
               <CardTitle>{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
+              <CardDescription>{item.metaDesc}</CardDescription>
             </Card>
           </Link>
         ))}
