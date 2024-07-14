@@ -59,9 +59,9 @@ export function Navbar() {
     <div className="hidden md:flex my-2 max-w-5xl mx-auto  items-center justify-between">
       <Image
         quality={100}
-        src="/sb-finwise-logo.jpeg"
+        src="/logo.jpg"
         height={80}
-        width={80}
+        width={200}
         alt="logo"
       ></Image>
       <NavigationMenu className=" my-2">
@@ -81,20 +81,11 @@ export function Navbar() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
+            <Link href="/about-us" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Services
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="/emi-calculator" legacyBehavior passHref>

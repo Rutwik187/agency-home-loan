@@ -20,7 +20,6 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
       <MobileNav />
       <div className="max-w-7xl mx-auto mt-6 flex flex-col gap-10  sm:gap-16 lg:gap-20">
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />

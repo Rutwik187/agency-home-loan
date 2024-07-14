@@ -23,7 +23,7 @@ const CompanyProfile = () => {
                     <p className="text-3xl sm:text-4xl">👋</p>
                     <blockquote className="ml-5">
                       <p className="text-sm font-medium text-white sm:text-lg">
-                        “We build presence that stays for ever”
+                        “We make the loan acquisition process as seamless”
                       </p>
                     </blockquote>
                   </div>
@@ -34,16 +34,20 @@ const CompanyProfile = () => {
 
           <div className="2xl:pl-16">
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
-              Why Choose Us
+              Who We Are
             </h2>
             <p className="text-xl leading-relaxed text-gray-900 mt-9">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia conse duis enim velit mollit.
-              Exercitation veniam.
+              Welcome to S B FinWise Consulting, a premier name in the retail
+              loan industry, renowned for our expertise and commitment to
+              excellence. Founded on the principles of integrity and
+              customer-centricity, we have emerged as a leading franchise
+              specializing in mortgages, home loans, and a wide range of
+              financial solutions.
             </p>
             <p className="mt-6 text-xl leading-relaxed text-gray-900">
-              Velit officia conse duis enim velit mollit. Exercit ation veniam
-              consequat sunt nostrud amet.
+              Our collaborations span across all major private and nationalized
+              banks, allowing us to offer you a diverse array of loan products
+              tailored to your unique needs.
             </p>
           </div>
         </div>

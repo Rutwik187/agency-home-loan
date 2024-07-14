@@ -6,10 +6,6 @@ const HowItWorks = () => {
           <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
             How does it work?
           </h2>
-          <p className="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis.
-          </p>
         </div>
 
         <div className="relative mt-12 lg:mt-20">
@@ -27,11 +23,13 @@ const HowItWorks = () => {
                 <span className="text-xl font-semibold text-gray-700"> 1 </span>
               </div>
               <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                Create a free account
+                Customer-Centric Service
               </h3>
               <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+                Our team of trained sales counselors provides door-step service,
+                ensuring convenience and personalized attention for each client.
+                We believe in building long-term relationships based on trust
+                and transparency.
               </p>
             </div>
 
@@ -40,11 +38,13 @@ const HowItWorks = () => {
                 <span className="text-xl font-semibold text-gray-700"> 2 </span>
               </div>
               <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                Build your website
+                Advanced Loan Evaluation System
               </h3>
               <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+                We utilize a sophisticated loan evaluation system to accurately
+                calculate your loan eligibility as per prevailing bank norms.
+                This enables us to offer precise advice, helping you select the
+                right bank and plan your finances effectively.
               </p>
             </div>
 
@@ -53,11 +53,13 @@ const HowItWorks = () => {
                 <span className="text-xl font-semibold text-gray-700"> 3 </span>
               </div>
               <h3 className="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
-                Release & Launch
+                Integrity and Transparency
               </h3>
               <p className="mt-4 text-base text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+                At S B FinWise Consulting, integrity is at the heart of
+                everything we do. We provide authentic information and advice,
+                ensuring that you are fully informed at every step of the loan
+                process.
               </p>
             </div>
           </div>
