@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Button } from "./ui/button";
+
 const CompanyProfile = () => {
   return (
     <section className=" bg-white ">
@@ -36,7 +39,7 @@ const CompanyProfile = () => {
             <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
               Who We Are
             </h2>
-            <p className="text-xl leading-relaxed text-gray-900 mt-9">
+            <p className="text-base leading-relaxed text-gray-900 mt-9">
               Welcome to S B FinWise Consulting, a premier name in the retail
               loan industry, renowned for our expertise and commitment to
               excellence. Founded on the principles of integrity and
@@ -44,11 +47,14 @@ const CompanyProfile = () => {
               specializing in mortgages, home loans, and a wide range of
               financial solutions.
             </p>
-            <p className="mt-6 text-xl leading-relaxed text-gray-900">
+            <p className="mt-6 text-base leading-relaxed text-gray-900">
               Our collaborations span across all major private and nationalized
               banks, allowing us to offer you a diverse array of loan products
               tailored to your unique needs.
             </p>
+            <Link href="/about-us">
+              <Button className="mt-4">Know More</Button>
+            </Link>
           </div>
         </div>
       </div>

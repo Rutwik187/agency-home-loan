@@ -2,6 +2,7 @@
 import { Monda } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+import { MobileNav } from "@/components/mobile-nav";
 
 const inter = Monda({ weight: "400", subsets: ["vietnamese"] });
 
@@ -13,7 +14,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
+        <div className="max-w-7xl mx-auto">
+          <MobileNav />
           <Navbar />
           {children}
         </div>

@@ -7,7 +7,25 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const LogoCloud = () => {
+const logoUrls = [
+  "/partners/logo-2.jpeg",
+  "/partners/logo-8.jpeg",
+  "/partners/logo-1.jpg",
+  "/partners/logo-6.jpg",
+  "/partners/logo-10.jpg",
+  "/partners/logo-3.png",
+  "/partners/logo-4.png",
+  "/partners/logo-5.png",
+  "/partners/logo-7.png",
+  "/partners/logo-9.png",
+  "/partners/logo-11.png",
+  "/partners/logo-12.png",
+  "/partners/logo-14.png",
+  "/partners/logo-15.png",
+  "/partners/logo-13.webp",
+];
+
+const Partners = () => {
   return (
     <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
       <Heading title="Choice of Partners" />
@@ -32,16 +50,16 @@ const LogoCloud = () => {
               },
               1024: {
                 slidesPerView: 4,
-                spaceBetween: 30,
+                spaceBetween: 15,
               },
             }}
           >
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <SwiperSlide key={item}>
+            {logoUrls.map((item, i) => (
+              <SwiperSlide key={i}>
                 <div>
                   <img
-                    className="object-contain w-auto mx-auto h-14"
-                    src="https://cdn.rareblocks.xyz/collection/celebration/images/logos/1/logo-1.png"
+                    className="object-contain w-auto mx-auto h-24"
+                    src={item}
                     alt=""
                   />
                 </div>
@@ -54,4 +72,4 @@ const LogoCloud = () => {
   );
 };
 
-export default LogoCloud;
+export default Partners;

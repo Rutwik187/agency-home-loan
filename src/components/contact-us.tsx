@@ -1,17 +1,17 @@
 import { Button } from "./ui/button";
+import Heading from "./ui/heading";
 import { Input } from "./ui/input";
 import { Separator } from "./ui/separator";
 import { Textarea } from "./ui/textarea";
-import Title from "./ui/title";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div id="contact-us">
       <section className="bg-gray-100 mx-auto max-w-5xl" id="contact">
         <div className=" px-4 py-8 sm:px-6 lg:px-8 ">
           <div className="mb-4">
             <div className="mb-6 text-center sm:text-center md:mx-auto md:mb-12">
-              <Title className="text-black">Get in Touch</Title>
+              <Heading title="Get in Touch" />
             </div>
           </div>
           <div className="flex items-stretch justify-center ">

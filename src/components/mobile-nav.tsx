@@ -10,27 +10,20 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
-import {
-  ArrowDown,
-  ArrowDownNarrowWide,
-  ArrowDownWideNarrow,
-  ChevronUp,
-} from "lucide-react";
-import {
-  DropdownMenuArrow,
-  DropdownMenuItemIndicator,
-} from "@radix-ui/react-dropdown-menu";
+
+import Link from "next/link";
 
 export function MobileNav() {
   return (
     <div className=" md:hidden flex justify-between items-center px-4">
-      <div className="flex gap-4">
+      <div className="flex gap-4 ">
         <Image
-          src="/sb-finwise-logo.jpeg"
-          width={100}
-          height={100}
+          src="/logo.jpg"
+          width={1000}
+          height={1000}
+          quality={100}
           alt="sppu-logo"
-          className="object-contain w-20 h-20"
+          className="object-contain w-32 my-4"
         />
       </div>
       <DropdownMenu>
@@ -38,27 +31,24 @@ export function MobileNav() {
           <Button>Menu</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
-          <DropdownMenuItem>Home</DropdownMenuItem>
-          <DropdownMenuItem>About Us</DropdownMenuItem>
-          <DropdownMenuItem>
-            {" "}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <div className="flex gap-4 items-center">
-                  <p>Services</p> <ChevronUp className="rotate-180" />
-                </div>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
-                <DropdownMenuItem>Home</DropdownMenuItem>
-                <DropdownMenuItem>About Us</DropdownMenuItem>
-                <DropdownMenuItem>Services</DropdownMenuItem>
-                <DropdownMenuItem>About Us</DropdownMenuItem>
-                <DropdownMenuItem>Contact</DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </DropdownMenuItem>
-          <DropdownMenuItem>About Us</DropdownMenuItem>
-          <DropdownMenuItem>Contact</DropdownMenuItem>
+          <Link href="/">
+            <DropdownMenuItem>Home</DropdownMenuItem>
+          </Link>
+          <Link href="/about-us">
+            <DropdownMenuItem>About Us</DropdownMenuItem>
+          </Link>
+
+          <Link href="/services">
+            <DropdownMenuItem>Services</DropdownMenuItem>
+          </Link>
+
+          <Link href="/emi-calculator">
+            <DropdownMenuItem>EMI Calculator</DropdownMenuItem>
+          </Link>
+
+          <Link href="/#contact-us">
+            <DropdownMenuItem>Contact</DropdownMenuItem>
+          </Link>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
