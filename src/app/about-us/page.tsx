@@ -115,8 +115,8 @@ const AboutUs = () => {
                 <span className="font-semibold">
                   Integrity and Transparency:
                 </span>{" "}
-                We provide authentic information and advice, ensuring you're
-                fully informed at every step.
+                We provide authentic information and advice, ensuring
+                you&apos;re fully informed at every step.
               </li>
             </ul>
           </div>
