@@ -11,7 +11,7 @@ import Image from "next/image";
 const slides = [
   { url: "/image-1.png" },
   { url: "/image-2.png" },
-  { url: "/image-3" },
+  { url: "/image-3.png" },
 ];
 
 const EmblaCarousel: React.FC = () => {
