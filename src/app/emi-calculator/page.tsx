@@ -55,12 +55,12 @@ export default function EMICalculator() {
     <div className="relative px-6 lg:px-8">
       <div className="mx-auto max-w-7xl py-4 sm:py-8 lg:py-12">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
-        <h1 className="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="text-center text-4xl font-bold tracking-tight text-primary sm:text-5xl">
           EMI Calculator
         </h1>
 
         <div className="py-6 px-6 sm:py-12 lg:px-8 flex flex-wrap gap-8">
-          <div className="flex-1 min-w-96">
+          <div className="flex-1 ">
             <form action="#" method="post" className="mx-auto max-w-xl">
               <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
                 <TextField

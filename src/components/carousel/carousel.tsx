@@ -8,7 +8,11 @@ import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 
-const slides = [{ url: "/image-1.png" }, { url: "/image-2.png" }];
+const slides = [
+  { url: "/image-1.png" },
+  { url: "/image-2.png" },
+  { url: "/image-3" },
+];
 
 const EmblaCarousel: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay()]);

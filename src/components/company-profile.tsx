@@ -20,7 +20,7 @@ const CompanyProfile = () => {
               />
             </div>
             <div className="absolute left-0 pr-12 bottom-8 xl:bottom-20">
-              <div className="max-w-xs bg-blue-600 rounded-lg sm:max-w-md xl:max-w-md">
+              <div className="max-w-xs bg-orange-500 rounded-lg sm:max-w-md xl:max-w-md">
                 <div className="px-3 py-4 sm:px-5 sm:py-8">
                   <div className="flex items-start">
                     <p className="text-3xl sm:text-4xl">👋</p>
@@ -36,7 +36,7 @@ const CompanyProfile = () => {
           </div>
 
           <div className="2xl:pl-16">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl lg:leading-tight">
+            <h2 className="text-3xl font-bold leading-tight text-primary sm:text-4xl lg:text-5xl lg:leading-tight">
               Who We Are
             </h2>
             <p className="text-base leading-relaxed text-gray-900 mt-9">

@@ -3,11 +3,9 @@ import Stats from "@/components/stats";
 
 import CompanyProfile from "@/components/company-profile";
 import HowItWorks from "@/components/how-it-works";
-import Footer from "@/components/footer";
 import Testimonials from "@/components/testimonials";
 
 import ContactUs from "@/components/contact-us";
-import { MobileNav } from "@/components/mobile-nav";
 import ServicesPage from "./services/page";
 import EMICalculatorHome from "@/components/emi-calculator";
 import Partners from "@/components/partners";
@@ -25,7 +23,6 @@ export default function Home() {
         <HowItWorks />
         <Testimonials />
         <ContactUs />
-        <Footer />
       </div>
     </div>
   );

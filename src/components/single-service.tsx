@@ -6,7 +6,7 @@ import { RichTextComponent } from "./RichTextComponent";
 const SingleService = ({ service }: any) => {
   return (
     <div className="md:flex items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
-      <div className="xl:w-2/6 lg:w-2/5 w-80 md:block hidden">
+      <div className="xl:w-2/6 lg:w-2/5 w-80 ">
         <Image
           className="w-full"
           alt="img of a girl posing"

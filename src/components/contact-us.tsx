@@ -41,10 +41,11 @@ const ContactUs = () => {
                         Our Office
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        Savitribai Phule Pune University
+                        Office No 308, Third Floor, Kamala Arcade
                       </p>
                       <p className="text-gray-600 dark:text-slate-400">
-                        Ganeshkhind Road, Pune
+                        Jangali Maharaj Rd, opp. Balgandharav, Shivajinagar,
+                        Pune,
                       </p>
                     </div>
                   </li>
@@ -72,7 +73,7 @@ const ContactUs = () => {
                         Call Us
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        +91-8669166575, +91-8766977911
+                        +91 98226 58948
                       </p>
                     </div>
                   </li>
@@ -99,7 +100,7 @@ const ContactUs = () => {
                         Mail Us:
                       </h3>
                       <p className="text-gray-600 dark:text-slate-400">
-                        sppublockchain@gmail.com
+                        sumit@sbfinwise.com
                       </p>
                     </div>
                   </li>
