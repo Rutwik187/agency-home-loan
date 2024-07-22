@@ -10,12 +10,14 @@ const Testimonials = () => {
           </h2>
         </div>
 
-        <div className="sk-ww-google-reviews" data-embed-id="25437213"></div>
-        <Script
-          src="https://widgets.sociablekit.com/google-reviews/widget.js"
-          async
-          defer
-        ></Script>
+        <div className="max-h-80 overflow-auto">
+          <div className="sk-ww-google-reviews" data-embed-id="25437213"></div>
+          <Script
+            src="https://widgets.sociablekit.com/google-reviews/widget.js"
+            async
+            defer
+          ></Script>
+        </div>
       </div>
     </section>
   );
