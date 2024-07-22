@@ -14,7 +14,7 @@ function TextField({
   onBlur,
 }: TextFieldProps) {
   return (
-    <div className="sm:col-span-2">
+    <div className="sm:col-span-2 ">
       {label && <Label htmlFor={name}>{label}</Label>}
       <div className="relative">
         <Input

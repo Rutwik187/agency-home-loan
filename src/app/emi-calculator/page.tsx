@@ -60,7 +60,7 @@ export default function EMICalculator() {
         </h1>
 
         <div className="py-6 px-6 sm:py-12 lg:px-8 flex flex-wrap gap-8">
-          <div className="flex-1 ">
+          <div className="flex-1 min-w-52">
             <form action="#" method="post" className="mx-auto max-w-xl">
               <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
                 <TextField

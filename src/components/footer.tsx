@@ -29,7 +29,7 @@ const Footer = () => {
               Links
             </p>
 
-            <ul className="mt-6 flex gap-4">
+            <ul className="mt-6 flex gap-4 flex-wrap">
               {navigation.map((item) => (
                 <li key={item.id}>
                   <Link

@@ -21,7 +21,7 @@ const PaymentBreakUp = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <PieChart width={500} height={300}>
+      <PieChart width={300} height={300}>
         <Pie
           data={payload}
           dataKey="value"

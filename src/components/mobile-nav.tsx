@@ -46,6 +46,10 @@ export function MobileNav() {
             <DropdownMenuItem>EMI Calculator</DropdownMenuItem>
           </Link>
 
+          <Link href="/blogs">
+            <DropdownMenuItem>Blogs</DropdownMenuItem>
+          </Link>
+
           <Link href="/#contact-us">
             <DropdownMenuItem>Contact</DropdownMenuItem>
           </Link>
